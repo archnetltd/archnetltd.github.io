@@ -44,13 +44,31 @@ Actually, the framework provides the easiest way to use html template. Scripting
 <li>Easily integrate any javascript libraries</li>
 <li>many more....</li>
 </ol><h3>
-<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting started</h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>The framework is consisted of the following files</p>
 
 <pre><code>Maven
-$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+&lt;dependency&gt;
+  &lt;groupId&gt;org.castafiore&lt;/groupId&gt;
+  &lt;artifactId&gt;org.castafiore.ui&lt;/artifactId&gt;
+  &lt;version&gt;x.x.x&lt;/version&gt;
+  &lt;type&gt;war&lt;/type&gt;
+&lt;/dependency&gt;
+
+Download war
+http://www..com
 </code></pre>
+
+<h3>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting started</h3>
+
+<p>The easiest way to start coding your first application is probably using maven.
+You simply need to add the dependency stated above in your pom.xml and your are ready.</p>
+
+<p>If you are not using maven, you can download the war, unzip it, put all the libraries in your class path.
+Then rename the war into your servlet container.
+To run your codes, simple deploy all class files in the classes directory of the downloaded war</p>
 
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
 
