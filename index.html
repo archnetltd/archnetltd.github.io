@@ -57,11 +57,52 @@ Actually, the framework provides the easiest way to use html template. Scripting
 &lt;/dependency&gt;
 
 Download war
-http://www..com
+http://www..com 
 </code></pre>
 
 <h3>
 <a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting started</h3>
+
+<h4>
+<a name="preparing-your-workspace" class="anchor" href="#preparing-your-workspace"><span class="octicon octicon-link"></span></a>Preparing your workspace</h4>
+
+<p>The easiest way to start using castafiore web framework is to download the startup war file which contains everything needed.
+Simply download it, add all the libraries and web.xml and index.jsp in your workspace.</p>
+
+<p>You will see a file called app-config.xml in the src directory. This</p>
+
+<ol>
+<li>Create your web project</li>
+<li>Add the following entry in your web.xml
+This servlet is the main entry point of castafiore web framework</li>
+</ol><pre><code>&lt;servlet&gt;
+   &lt;servlet-name&gt;castafiore&lt;/servlet-name&gt;
+   &lt;servlet-class&gt;org.castafiore.web.servlet.CastafioreServlet&lt;/servlet-class&gt;
+   &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+&lt;/servlet&gt;
+
+&lt;servlet-mapping&gt;
+   &lt;servlet-name&gt;castafiore&lt;/servlet-name&gt;
+   &lt;url-pattern&gt;/castafiore/*&lt;/url-pattern&gt;
+
+&lt;/servlet-mapping&gt;
+</code></pre>
+
+<ol>
+<li>You need a spring application context file which will act as your application registry.
+file should obey the following convention
+a. Its name should be -config.xml
+b. It should be in classpath with package config/</li>
+<li>finally to run your application, you will need a page (html, jsp) it does not matter.
+However, the page should be in the root directory of your web application.</li>
+</ol><p>Say you have created an application with name helloworld. To run the application, you need to add the following scripts in your page </p>
+
+<p>Create a div where you want your application to be rendered. The div should have same id as your application. In this case </p><div></div>
+Finally, the javascript to render the application
+
+<p>Note: For convenience, we have provided an index.jsp file which already contains every needed.
+So, to run your application with name 'helloworld', you simply have to execute the url as shown below
+index.jsp?applicationid=helloworld</p>
 
 <p>The easiest way to start coding your first application is probably using maven.
 You simply need to add the dependency stated above in your pom.xml and your are ready.</p>
